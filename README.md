@@ -13,6 +13,17 @@ table: pitches
 - pitch_type / string / type of pitch
 - velocity / float / speed of pitch
 
+# repeated_payment_tracker
+Identify any payments made at the same merchant with the same credit card for the same amount within 10 minutes of each other. Count such repeated payments.
+
+Schema: 
+table: transactions
+- transaction_id / integer / unique transaction #
+- merchant_id / integer / unique merchant #
+- credit_card_id / integer / unique cc #
+- amount / integer / amount spent
+- transaction_timestamp / datetime / time of transaction
+
 # swapped_food_delivery
 Due to an error in the delivery driver instructions, each item's order was swapped with the item in the subsequent row. If the last item has an odd order ID, it should remain as the last item in the corrected data. In the results, return the correct pairs of order IDs and items.
 
