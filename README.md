@@ -20,3 +20,15 @@ Schema:
 table: orders
 - order_id	/ integer	/ the ID of each order.
 - item	/ string	/ the name of the food item in each order.
+
+# three_topping_pizza
+Given a list of pizza toppings, consider all the possible 3-topping pizzas, and print out the total cost of those 3 toppings. Sort the results with the highest total cost on the top followed by pizza toppings in ascending order.
+
+- Break ties by listing the ingredients in alphabetical order, starting from the first ingredient, followed by the second and third.
+- Do not display pizzas where a topping is repeated. For example, ‘Pepperoni,Pepperoni,Onion Pizza’.
+- Ingredients must be listed in alphabetical order. For example, 'Chicken,Onions,Sausage'. 'Onion,Sausage,Chicken' is not acceptable.
+
+Schema: 
+table: pizza_toppings
+- topping_name / string / name of the topping
+- ingredient_cost / float / price of that individual ingredient
